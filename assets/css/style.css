@@ -1,0 +1,1439 @@
+/*
+Theme Name: xthemenamex
+Theme URI: http://www.davidrg.com/
+Author: David Green (@davidrg86)
+Author URI: http://www.davidrg.com/
+Description: Custom theme for xthemenamex
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: xthemex
+
+This theme, like WordPress, is licensed under the GPL.
+
+xthemenamex is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+*/
+
+
+/**
+ *
+ * HTML5 Reset
+ * Baseline Normalize
+ * normalize.css v3.0.1 | MIT License | git.io/normalize
+ */
+
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+
+/**
+ * Box Sizing
+ */
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+
+/**
+ * Float Clearing
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/* Might need to add this to page-content */
+
+
+/*--------------------------------------------------------------
+# Defaults
+--------------------------------------------------------------*/
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+	transition:         all 0.1s ease-in-out;
+}
+
+::-moz-selection {
+	background-color: #333;
+	color: #fff;
+}
+
+::selection {
+	background-color: #333;
+	color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# Site Structure & Wraps
+--------------------------------------------------------------*/
+.site-container,
+.wrap {
+	margin: 0 auto;
+	max-width: 1200px;
+	clear: both;
+}
+
+.content-sidebar-wrap,
+.site-header > .wrap {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.site-content {
+	float: left;
+	width: 66.6666667%; /* 800px / 1200px */
+}
+
+.sidebar-primary {
+	float: right;
+	width: 30%; /* 360px / 1200px */
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+body {
+	background-color: #fff;
+	color: #333;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.625;
+	margin: 0;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em;
+	padding-left: 23px;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+	padding-left: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+/* Does not apply to child lists */
+.list-no-decoration {
+	list-style: none;
+	padding-left: 0;
+}
+
+/* Display a list inline. Doesn't apply to child lists */
+.list-inline{
+	list-style: none;
+	padding-left: 0;
+}
+
+.list-inline > li {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.list-inline li:last-child {
+	margin-right: 0;
+}
+
+/* Display term to left of definition */
+.dl-horizontal dt {
+	float: left;
+	width: 160px;
+	text-align: right;
+	clear: left;
+}
+
+.dl-horizontal dd {
+	margin-left: 180px;
+}
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #333;
+	clear: both;
+	line-height: 1.15;
+	margin: 0; /* Without this the browser stylesheet kicks in */
+}
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+
+/*--------------------------------------------------------------
+# Links
+--------------------------------------------------------------*/
+a,
+a:visited {
+	color: royalblue;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: red;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+a:hover img {
+	opacity: 0.8;
+}
+
+/**
+ * Titles
+ */
+
+.entry-title a,
+.sidebar .widget-title a {
+	color: #333;
+}
+
+.entry-title a:hover {
+	color: red;
+}
+
+/*--------------------------------------------------------------
+# Tables
+--------------------------------------------------------------*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+tbody {
+	border-bottom: 1px solid #ddd;
+}
+
+td,
+th {
+	text-align: left;
+}
+
+td {
+	border-top: 1px solid #ddd;
+	padding: 6px 0;
+}
+
+/* add table-striped class to <table> for styling alt-rows*/
+.table-striped tr:nth-of-type(odd) {
+	background-color: #f9f9f9;
+}
+
+.table-hover tr:hover {
+	background-color: #f9f9f9;
+}
+
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+label {
+	display: block;
+}
+
+/* Hide the required symbols. */
+.ninja-forms-req-symbol,
+.ninja-forms-required-items {
+	display: none;
+}
+
+/* Style the errors shown when a form error occurs */
+.ninja-forms-field-error p {
+	color: crimson;
+	margin: 0;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 0;
+	border-radius: 3px;
+	background-color: #669966;
+	color: #fff;
+	line-height: 1;
+	padding: 8px 25px 6px;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background-color: #993366;
+}
+
+select:focus,
+input:focus,
+textarea:focus,
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.4),
+		inset 0 2px 5px rgba(0, 0, 0, 0.15);
+	outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: 6px 5px 5px;
+}
+
+textarea {
+	padding: 6px 7px;
+	width: 100%;
+	vertical-align: top; /* Eliminates extra space under textarea */
+}
+
+/* Space beneath ninja form fields */
+.ninja-forms-cont .field-wrap {
+	margin-bottom: 15px;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+input:focus::-moz-placeholder { color:transparent; }
+input:focus:-ms-input-placeholder { color:transparent; }
+
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-moz-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:transparent; }
+
+::-moz-placeholder {
+	color: #aaa;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.site-header {
+	position: relative;
+	padding-top: 10px;
+}
+
+.site-logo {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+# Menus
+--------------------------------------------------------------*/
+/* style the menu bar */
+.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+	background-color: #333;
+	text-align: left;
+}
+
+.main-navigation ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation li {
+	position: relative;
+	display: inline-block;
+}
+
+/* Space out only the top-level links */
+.main-navigation .menu > li {
+	margin: 0 7px;
+}
+
+.main-navigation li:first-child {
+	margin-left: 0;
+}
+
+.main-navigation li:last-child {
+	margin-right: 0;
+}
+
+/* Base font style for the primary menu */
+.main-navigation a {
+	display: block;
+	padding: 10px 15px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+/* top level hover. Parent link maintain's hover */
+.main-navigation li:hover > a {
+	background-color: #555;
+}
+
+/* First level sub-nav */
+.main-navigation ul ul {
+	float: left;
+	position: absolute;
+	top: 50px; /* set to height of menu */
+	left: -999em;
+	z-index: 99999;
+	background-color: #555;
+}
+
+/* sub-nav hover */
+.main-navigation ul ul li:hover > a {
+	background-color: #333;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current_page_parent > a {
+}
+
+
+
+
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/* Previous and next links at bottom of posts*/
+.post-navigation .nav-previous a,
+.post-navigation .nav-next a {}
+
+/*--------------------------------------------------------------
+# Utility classes
+--------------------------------------------------------------*/
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-nowrap {
+	white-space: nowrap;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-lowercase {
+	text-transform: lowercase;
+}
+
+.clearboth {
+	clear: both;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-none {
+	float: none;
+}
+
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/*--------------------------------------------------------------
+# Column Classes
+# Width: 1200px
+# Gutter: 20px
+# http://www.billerickson.net/column-class-generator/
+--------------------------------------------------------------*/
+
+.five-sixths,
+.four-sixths,
+.four-fifths,
+.one-fifth,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-fifths,
+.three-sixths,
+.two-fourths,
+.two-fifths,
+.two-sixths,
+.two-thirds {
+	float: left;
+	margin-left: 1.6666666666667%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	width: 49.166666666667%;
+}
+
+.one-third,
+.two-sixths {
+	width: 32.222222222222%;
+}
+
+.four-sixths,
+.two-thirds {
+	width: 66.111111111111%;
+}
+
+.one-fourth {
+	width: 23.75%;
+}
+
+.three-fourths {
+	width: 74.583333333333%;
+}
+
+.one-fifth {
+	width: 18.666666666667%;
+}
+
+.two-fifths {
+	width: 39%;
+}
+
+.three-fifths {
+	width: 59.333333333333%;
+}
+
+.four-fifths {
+	width: 79.666666666667%;
+}
+
+.one-sixth {
+	width: 15.277777777778%;
+}
+
+.five-sixths {
+	width: 83.055555555556%;
+}
+
+.first {
+	clear: both;
+	margin-left: 0;
+}
+
+
+/**
+ * Flush columns (no gutter)
+ */
+
+.flush-five-sixths,
+.flush-four-sixths,
+.flush-four-fifths,
+.flush-one-fifth,
+.flush-one-fourth,
+.flush-one-half,
+.flush-one-sixth,
+.flush-one-third,
+.flush-three-fourths,
+.flush-three-fifths,
+.flush-three-sixths,
+.flush-two-fourths,
+.flush-two-fifths,
+.flush-two-sixths,
+.flush-two-thirds {
+	float: left;
+}
+
+.flush-one-half,
+.flush-three-sixths,
+.flush-two-fourths {
+	width: 50%;
+}
+
+.flush-one-third,
+.flush-two-sixths {
+	width: 33.333333%;
+}
+
+.flush-four-sixths,
+.flush-two-thirds {
+	width: 66.666666666667%;
+}
+
+.flush-one-fourth {
+	width: 25%;
+}
+
+.flush-three-fourths {
+	width: 75%;
+}
+
+.flush-one-fifth {
+	width: 20%;
+}
+
+.flush-two-fifths {
+	width: 40%;
+}
+
+.flush-three-fifths {
+	width: 60%;
+}
+
+.flush-four-fifths {
+	width: 80%;
+}
+
+.flush-one-sixth {
+	width: 16.6666667%;
+}
+
+.flush-five-sixths {
+	width: 83.3333333%;
+}
+
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget. */
+.widget_search .search-submit {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/* Bottom of post */
+.entry-footer {}
+.entry-footer .cat-links {}
+.entry-footer .tags-links {}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comments {} /* holds comments and form */
+.comments-container {} /* holds comments and comments title */
+.comments-title {} /* h2 above comments list */
+
+.no-comments {} /* P tag holding no comments message */
+
+/* Individual comment */
+.comment {
+	margin-bottom: 25px;
+}
+
+.comment p:last-child {
+	margin-bottom: 0;
+}
+
+.comment-header {}
+.comment-author .avatar {}
+.comment-author span {} /* name */
+.comment-meta {}
+.comment-time-link {}
+.comment-content {}
+.comment .reply-link {} /* reply link's container */
+.comment-reply-link {} /* actual reply link */
+
+.comment-awaiting-moderation{
+	display: block;
+} /* your comment is awaiting moderation */
+
+.comment.even {}
+.comment.thread-even {}
+.comment.alt {}
+.comment.thread-alt {}
+/* style post author's posts differently */
+.comment-list .bypostauthor,
+.comment-list li ul.children li.bypostauthor {}
+.comment-author-username {} /* style a specific author's comments */
+
+.comment-list,
+.comment-list .children {
+	list-style: none;
+	padding-left: 0;
+}
+
+.comment-list .children {
+	margin-top: 20px;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.comment-respond {} /* holds comment reply form */
+.comment-reply-title {} /* h3 above comment form. */
+.comment-reply-title a {} /* When replying to comment, name of previous poster and cancel comment */
+.comment-form {} /* form element */
+.comment-form-author {} /* contains author field and label*/
+.comment-form-email {}
+.comment-form-comment {} /* contains textarea */
+.comment-form label {}
+.comment-form input[type="text"],
+.comment-form input[type="email"] {}
+.comment-form .required {
+	margin-right: 5px;
+	color: crimson;
+	font-size: 18px;
+}
+.comment-form input[type="submit"] {} /* submit button */
+
+
+
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+/* Hide Jetpack's smiley face image */
+#wpstats {
+	display: none;
+}
+
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+embed,
+iframe,
+img,
+object,
+video {
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+.img-rounded {
+	border-radius: 6px;
+}
+
+a.alignnone {
+	display: inline-block;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+a.aligncenter img {
+	display: block;
+	margin: 0 auto;
+}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 24px;
+}
+
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: left;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+	/* overflow: hidden; */
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	margin: 0 0 40px;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery img {
+	height: auto;
+	width: auto;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+
+/**
+ * Site Footer
+ */
+
+.site-footer {
+	padding: 10px 0;
+	text-align: center;
+	background: #333;
+	color: #fff;
+}
+
+.footer-widgets {
+	clear: both;
+	margin-bottom: 35px;
+}
+
+.footer-widgets .one-half,
+.footer-widgets .one-third,
+.footer-widgets .one-fourth {
+	margin-bottom: 35px;
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# Responsive Menu
+--------------------------------------------------------------*/
+
+.site-header .mobile-menu-toggle-button {
+	float: right;
+	line-height: 0.2;
+	padding: 6px 16px 15px;
+	background: transparent;
+	color: #333;
+	border: solid 1px #333;
+	border-radius: 6px;
+	font-size: 21px;
+}
+
+.site-header .mobile-menu-toggle-button:hover,
+.site-header .mobile-menu-toggle-button:active {
+	color: #669966;
+	border: solid 1px #669966;
+	box-shadow: none;
+}
+
+.mobile-menu-toggle-button:before {
+	content: "\2261";
+	font-size: 45px;
+	position: relative;
+	top: 3px;
+	margin-right: 3px;
+}
+
+.mobile-menu .mobile-menu-toggle:hover {
+	color: #669966;
+	border: solid 1px #669966;
+}
+
+
+.mobile-menu-toggle {
+	cursor: pointer;
+	display: none;
+}
+
+.mobile-menu .mobile-menu-toggle {
+	background: transparent;
+	padding: 12px 16px 10px;
+	line-height: 1;
+	border: solid 1px #fff;
+	border-radius: 6px;
+	color: #fff;
+	display: inline-block;
+	margin: 0 auto 5px;
+}
+
+.mobile-menu .mobile-menu-toggle:hover {
+	color: #669966;
+	border: solid 1px #669966;
+}
+
+.mobile-menu {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: -260px;
+	width: 250px;
+	height: 100%;
+	padding: 15px;
+	background: #333;
+	box-shadow: 0 0 5px 1px rgba( 0, 0, 0, 0.7 );
+	transition: all 0.19s ease-in-out;
+	overflow-y: auto;
+}
+
+.mobile-menu.mobile-menu-active {
+	right: 0;
+}
+
+.mobile-menu ul {
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.mobile-menu li {
+	position: relative;
+}
+
+.mobile-menu a {
+	display: block;
+	font-size: 20px;
+	padding: 4px 0;
+	margin: 10px 0;
+	color: #fff;
+}
+
+.mobile-menu a:hover, .mobile-menu a:active {
+	color: #669966;
+}
+
+.mobile-menu button:hover, .mobile-menu button:active {
+	background: transparent;
+	box-shadow: none;
+}
+
+.close-menu {
+	color: #fff;
+	font-size: 20px;
+}
+
+.sub-menu-toggle {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 5px;
+	text-align: center;
+	visibility: visible;
+}
+
+button.sub-menu-toggle {
+	background-color: transparent;
+	color: #999;
+	box-shadow: none;
+}
+
+.sub-menu-toggle {
+	padding: 11px 20px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.sub-menu-toggle:before {
+	content: "+";
+	font-size: 28px;
+	position: relative;
+	top: -7px;
+}
+
+.sub-menu-toggle.activated:before {
+	content: "-";
+	font-size: 28px;
+}
+
+.sub-menu-toggle:hover, .sub-menu-toggle:active {
+	color: #669966;
+}
+
+.mobile-menu .sub-menu {
+	clear: both;
+	display: none;
+	opacity: 1;
+	position: static;
+	width: 100%;
+	transition: opacity .4s ease-in-out;
+}
+
+.mobile-menu .sub-menu a {
+	border-left: 0;
+	position: relative;
+	width: auto;
+}
+
+.mobile-menu .sub-menu .sub-menu {
+	margin: 0;
+}
+
+.mobile-menu .sub-menu a {
+	padding-left: 20px;
+}
+
+.mobile-menu .sub-menu .sub-menu a {
+	padding-left: 40px;
+}
+
+.mobile-menu .sub-menu .sub-menu .sub-menu a {
+	padding-left: 50px;
+}
+
+
+/**
+ * Media Queries
+ */
+
+@media screen and (min-width: 768px) {
+	.mobile-show {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.site-content,
+	.sidebar-primary {
+		width: 100%;
+		float: none;
+	}
+
+	.main-navigation {
+		display: none;
+	}
+
+	.mobile-hide {
+		display: none;
+	}
+
+	.mobile-menu {
+		display: block;
+	}
+
+	.mobile-menu-toggle {
+		display: inline-block;
+	}
+
+	/**
+	 * horizontal display of definition list now standard vertical display
+	 */
+	.dl-horizontal dt {
+		float: none;
+		width: auto;
+		text-align: left;
+	}
+
+	.dl-horizontal dd {
+		margin-left: 0;
+	}
+
+	.five-sixths,
+	.four-sixths,
+	.four-fifths,
+	.one-fifth,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fourths,
+	.three-fifths,
+	.three-sixths,
+	.two-fourths,
+	.two-fifths,
+	.two-sixths,
+	.two-thirds {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+
+	.gallery .gallery-item {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: 100%;
+		display: block;
+	}
+}
