@@ -1419,10 +1419,24 @@ button.sub-menu-toggle {
 	.two-fourths,
 	.two-fifths,
 	.two-sixths,
-	.two-thirds {
+	.two-thirds,
+	.flush-five-sixths,
+	.flush-four-sixths,
+	.flush-four-fifths,
+	.flush-one-fifth,
+	.flush-one-fourth,
+	.flush-one-half,
+	.flush-one-sixth,
+	.flush-one-third,
+	.flush-three-fourths,
+	.flush-three-fifths,
+	.flush-three-sixths,
+	.flush-two-fourths,
+	.flush-two-fifths,
+	.flush-two-sixths,
+	.flush-two-thirds {
 		float: none;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 0 auto 30px;
 		width: 100%;
 	}
 }
