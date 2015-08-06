@@ -116,8 +116,8 @@ add_action( 'widgets_init', 'xthemex_widgets_init' );
 /**
  * Dequeue files not needed by plugins
  */
-add_action( 'wp_enqueue_scripts' , 'mali_dequeue_styles' , 20 );
-function mali_dequeue_styles() {
+add_action( 'wp_enqueue_scripts' , 'xthemex_dequeue_styles' , 20 );
+function xthemex_dequeue_styles() {
 	// wp_dequeue_style( 'sb_instagram_icons' );
 	// wp_dequeue_style( 'sb_instagram_styles' );
 	remove_action( 'ninja_forms_display_css', 'ninja_forms_display_css');
