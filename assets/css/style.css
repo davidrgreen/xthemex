@@ -1185,6 +1185,29 @@ img.centered,
 
 
 
+/**
+ * Sprite
+ */
+.theme-sprite {
+	background-image: url('../img/sprite.png') !important;
+	background-repeat: no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	text-indent: -9999px;
+}
+
+a.theme-sprite:hover {
+	opacity: 0.7;
+}
+
+.theme-sprite--phone {
+	background-position: 0 0;
+	width: 31px;
+	height: 32px;
+}
+
+
+
 /*--------------------------------------------------------------
 # Responsive Menu
 --------------------------------------------------------------*/
@@ -1367,6 +1390,21 @@ button.sub-menu-toggle {
 /**
  * Media Queries
  */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1023px),
+	   only screen and (-moz-min-device-pixel-ratio: 1.5) and (max-width: 1023px),
+	   only screen and (-o-min-device-pixel-ratio: 3/2) and (max-width: 1023px),
+	   only screen and (min-device-pixel-ratio: 1.5) and (max-width: 1023px) {
+	.theme-sprite {
+		background-image: url('../img/sprite-retina.png');
+		background-size: 235px 33px;
+	}
+
+	.site-logo .logo {
+		background: url('../img/logo-retina.png') no-repeat;
+		background-size: 170px 167px;
+	}
+}
 
 @media screen and (min-width: 768px) {
 	.mobile-show {
