@@ -399,6 +399,11 @@ label {
 	margin: 0;
 }
 
+/* Hide the Ninja Forms honey pot*/
+.hp-wrap {
+	display: none;
+}
+
 button,
 input[type="button"],
 input[type="reset"],
