@@ -26,7 +26,7 @@
 	</div>
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<div class="wrap">
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'fallback_cb' => '__return_false' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'fallback_cb' => '__return_false' ) ); ?>
 		</div>
 	</nav>
 </header>
