@@ -53,9 +53,9 @@ function xthemex_custom_login_style() {
 /**
  * Customize footer text in the admin
  */
-add_filter( 'admin_footer_text', 'xthemex_admin_footer' );
+//add_filter( 'admin_footer_text', 'xthemex_admin_footer' );
 function xthemex_admin_footer() {
-	echo '<i>Site design by <u><a href="http://maliandfriends.com" target="_blank">Mali and Friends</a></u></i>';
+	echo '<i>Site design by <u><a href="http://davidrg.com" target="_blank">David Green</a></u></i>';
 }
 
 
