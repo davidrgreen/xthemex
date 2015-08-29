@@ -423,6 +423,14 @@ input[type="submit"]:hover {
 	background-color: #993366;
 }
 
+button[disabled],
+button:disabled,
+input[type="button"]:disabled,
+input[type="reset"]:disabled,
+input[type="submit"]:disabled {
+	opacity: 0.5;
+}
+
 select:focus,
 input:focus,
 textarea:focus,
